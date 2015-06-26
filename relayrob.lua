@@ -17,18 +17,13 @@ end
    s:listen(
       80,
       function (conn)
-      	local function onSent(connection, payload)
-      		if string.find(payload, "POST") then
-
-	        end
-      	end
 		local function onReceive(connection, payload)
 			collectgarbage()
 			print(payload) -- for debugging
 			-- parse payload and decide what to serve.
 			-- print ap list
 			local ap = ""
-			-- aggregate the SSID and send as a list.
+			-- aggregate the SSID and send as a select list.
 			local function listap(t)
 				collectgarbage()		
 				for k,v in pairs(t) do
@@ -56,7 +51,7 @@ end
 	            conn:close()
 	            conn = nil
 	            local ssid, key, user, pass, client = string.gmatch(payload, "ssid=(.*)&key=(.*)&user=(.*)&pass=(.*)&client=(%w+)")()
-	            if string.len(key)>8 then -- TODO verify ssid and key more effectively
+	            if string.len(key)>8 then -- TODO verify key more effectively
 	                print('SSID: '..ssid..', PASS: '..key)
 	                print ("Connecting..")
 	                wifi.setmode(wifi.STATION)
@@ -71,13 +66,10 @@ end
 	                if client then file.writeline("CLIENT=\'"..client.."\'") end
 	                file.flush()
 	                file.close()
-
-	                ssid = nil
-	                key = nil
 	                print "Restarting..."
 	                node.restart()
 	            else
-	                print 'Error:SSID not found'
+	                print 'Error:WIFI Password is less than 8'
 	                node.restart()
 	            end
 			end
