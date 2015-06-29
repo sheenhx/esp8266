@@ -86,3 +86,9 @@ Once the touch sensor is pressed, it will set the register bits accordingly.
 You should be able to utilize the json message for your own interests.
 
 ![wifi](/pic/dashboard.png)
+
+###Change the cheking frequency
+
+![wifi](/pic/frequency.png)
+
+Just click the send button in the Control Panel
