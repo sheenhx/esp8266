@@ -89,7 +89,7 @@
       setup_mpr121()
     end)
 
-    tmr.alarm(0, 400, 1, function()
+    tmr.alarm(0, relayrfq or 500, 1, function()  --check the register using the received parameter
       local reg = read_reg(0x5A, 0x00) -- read pressed register 1
       local reg2 = read_reg(0x5A, 0x01)-- read pressed register 2
       local pbit1= string.byte(reg)
