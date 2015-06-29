@@ -60,7 +60,7 @@ On boarding the NodeMCU to relayr cloud
 
 Press the FLASH button for 2 seconds after powered up
 
-![nodemcuob](/pic/ob.jpg)
+![nodemcuob](/pic/ob.JPG)
 
 And you have to connect the WIFI SSID begins with ESP like ESP_1092983
 
@@ -75,3 +75,14 @@ Exampble (publish the touch sensor data received from i2c)
 ------
 
 The example provides you the scripts about forwarding data to the relayr cloud.
+
+
+Once the touch sensor is pressed, it will set the register bits accordingly.
+
+```
+[{"meaning":"btnreg1","value": 1 },{"meaning":"btnreg2","value": 2}]
+```
+
+You should be able to utilize the json message for your own interests.
+
+![wifi](/pic/dashboard.png)
