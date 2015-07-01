@@ -89,6 +89,14 @@ You should be able to utilize the json message for your own interests.
 
 ###Change the cheking frequency
 
-![wifi](/pic/frequency.png)
+![feq](/pic/frequency.png)
 
 Just click the send button in the Control Panel
+
+
+Exampble2 (publish the DHT22 data)
+------
+The example provides you the scripts about forwarding temperature sensor data to the relayr cloud.
+
+![dash](/pic/DHT.png)
+
