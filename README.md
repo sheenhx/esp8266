@@ -100,3 +100,5 @@ The example provides you the scripts about forwarding temperature sensor data to
 
 ![dash](/pic/DHT.png)
 
+you can also adjust sampling value in our dashboard
+
