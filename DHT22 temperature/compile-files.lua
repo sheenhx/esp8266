@@ -3,7 +3,7 @@ local luaFile= {}
 
 local l = file.list();
     for k,v in pairs(l) do
-      luaFile[#luaFile+1] = string.match(k, "relayr.*")
+      luaFile[#luaFile+1] = string.match(k, "(relayr(.*).lua)")
     end
 
 print(table.concat( luaFile, "\n"))
